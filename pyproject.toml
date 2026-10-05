@@ -25,6 +25,9 @@ tojiki = "tojiki.__main__:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+tojiki = ["stopwords.txt"]
+
 [project.urls]
 Homepage = "https://github.com/BAHROMTJ/tojiki"
 Issues = "https://github.com/BAHROMTJ/tojiki/issues"
