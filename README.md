@@ -15,6 +15,7 @@ Tajik is spoken by about 10 million people, yet developers building apps, search
 | Numbers → words | `2026` → `ду ҳазору бисту шаш` |
 | Ordinals | `2` → `дуюм`, `30` → `сиюм` |
 | Text normalization | fixes Latin `o` hidden in `Тoҷик`, Kazakh `һ` → `ҳ`, combining macrons → `ӣ` |
+| Stop words | `STOPWORDS` contains common words such as `ва`, `дар`, and `ба` |
 
 ## Install
 
@@ -34,6 +35,19 @@ to_words(125)                      # 'саду бисту панҷ'
 to_ordinal(21)                     # 'бисту якум'
 normalize("Тoҷик")                 # 'Тоҷик'  (the "o" was Latin)
 ```
+
+Filter whitespace-separated words with the small, lowercase Cyrillic stop-word set:
+
+```python
+from tojiki import STOPWORDS
+
+words = "ин забони тоҷикӣ".split()
+[word for word in words if word not in STOPWORDS]  # ['забони', 'тоҷикӣ']
+```
+
+The list is in `src/tojiki/stopwords.txt`, with one word per line, so it can be
+reviewed and extended. Normalize and lowercase input before matching as needed;
+punctuation removal and tokenization are left to the caller.
 
 Command line:
 
