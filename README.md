@@ -1,6 +1,6 @@
 # tojiki
 
-[![CI](https://github.com/BAHROMTJ/tojiki/actions/workflows/ci.yml/badge.svg)](https://github.com/BAHROMTJ/tojiki/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/tojiki)](https://pypi.org/project/tojiki/) [![CI](https://github.com/BAHROMTJ/tojiki/actions/workflows/ci.yml/badge.svg)](https://github.com/BAHROMTJ/tojiki/actions/workflows/ci.yml)
 
 Open-source tools for the **Tajik language** (забони тоҷикӣ), written in pure Python with no dependencies.
 
@@ -19,7 +19,7 @@ Tajik is spoken by about 10 million people, yet developers building apps, search
 ## Install
 
 ```bash
-pip install git+https://github.com/BAHROMTJ/tojiki.git
+pip install tojiki
 ```
 
 ## Usage
