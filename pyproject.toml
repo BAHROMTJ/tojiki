@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tojiki"
+version = "0.1.0"
+description = "Open-source tools for the Tajik language: transliteration, numbers to words, text normalization"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Bahrom" }]
+requires-python = ">=3.9"
+keywords = ["tajik", "tojiki", "nlp", "transliteration", "cyrillic", "language"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: Tajik",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+tojiki = "tojiki.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/BAHROMTJ/tojiki"
+Issues = "https://github.com/BAHROMTJ/tojiki/issues"
